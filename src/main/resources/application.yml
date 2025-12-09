@@ -3,6 +3,11 @@ spring:
     default: local
   application:
     name: backend-thanos
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret: ${JWT_SECRET}
 
   jpa:
     hibernate:
