@@ -31,8 +31,8 @@ public class SwaggerConfig {
 
     private Info apiInfo() {
         return new Info()
-                .title("API 문서")
-                .description("Supabase 연동 API 테스트")
+                .title("Thanos")
+                .description("Thanos API 테스트")
                 .version("1.0.0");
     }
 }
