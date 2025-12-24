@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record BoardResponse(
-        UUID id,
+        Long id,
         String name,
         String description,
         LocalDateTime createdAt

@@ -16,15 +16,4 @@ import java.util.UUID;
 @RequestMapping("/api/member")
 @RequiredArgsConstructor
 public class MemberController {
-    private final MemberRepository memberRepository;
-
-    @GetMapping("/getuser")
-    public ResponseEntity<BaseResponse<Member>> getUserInfo() {
-        UUID currentUserId = SecurityUtil.getCurrentUserId();
-
-        Member member = memberRepository.findByUserId(currentUserId)
-                .orElseThrow(() -> new RuntimeException("회원 정보를 찾을 수 없습니다."));
-
-        return ResponseEntity.ok(BaseResponse.ok(member));
-    }
 }
