@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .httpBasic(AbstractHttpConfigurer::disable)
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/health", "/swagger-ui/**", "/v3/api-docs/**", "/api/auth/**").permitAll()
+                        .requestMatchers("/api/health", "/swagger-ui/**", "/v3/api-docs/**", "/api/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
 
